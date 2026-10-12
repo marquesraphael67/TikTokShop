@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Conheça o Guia Prático TikTok Shop para Afiliados. E-book digital por R$ 9,90.">
+  <title>TikTok Shop para Afiliados | Guia Prático</title>
+
+  <style>
+    :root {
+      --verde: #087e83;
+      --verde-claro: #e9f7f5;
+      --texto: #17222c;
+      --cinza: #687581;
+      --borda: #e5ebeb;
+      --fundo: #f7faf9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      line-height: 1.7;
+      background: white;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #ffffffee;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .logo span { color: var(--verde); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      color: var(--cinza);
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 23px;
+      background: var(--verde);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .2s;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: #05666b;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark { background: var(--texto); }
+
+    .hero {
+      padding: 85px 0;
+      background:
+        radial-gradient(circle at 85% 25%, #dff5f0, transparent 35%),
+        linear-gradient(180deg, white, #f8fbfa);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 30px;
+      background: var(--verde-claro);
+      color: var(--verde);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h1, h2, h3 { line-height: 1.2; }
+
+    h1 {
+      margin: 24px 0;
+      font-size: clamp(38px, 5vw, 59px);
+      letter-spacing: -2px;
+    }
+
+    h1 span, h2 span { color: var(--verde); }
+
+    .lead {
+      color: var(--cinza);
+      font-size: 17px;
+      max-width: 570px;
+    }
+
+    .checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .checks span {
+      padding: 7px 10px;
+      background: var(--verde-claro);
+      border-radius: 7px;
+      color: #245653;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .small {
+      margin-top: 20px;
+      color: var(--cinza);
+      font-size: 12px;
+    }
+
+    .book-area {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .book {
+      width: 320px;
+      min-height: 430px;
+      padding: 30px;
+      border-radius: 8px 18px 18px 8px;
+      background: linear-gradient(145deg, #123b3e, #10232e);
+      color: white;
+      box-shadow: 15px 22px 45px #123b3e30;
+      transform: rotate(-3deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .book .mini {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #8ee5da;
+      font-weight: bold;
+    }
+
+    .book .symbol {
+      font-size: 75px;
+      color: #8ee5da;
+      line-height: 1.2;
+    }
+
+    .book h2 {
+      color: white;
+      font-size: 34px;
+      letter-spacing: -1px;
+    }
+
+    .book h2 span { color: #8ee5da; }
+
+    .book p {
+      color: #d5e8e7;
+      font-size: 13px;
+    }
+
+    .section { padding: 85px 0; }
+
+    .section-title {
+      max-width: 650px;
+      margin-bottom: 38px;
+    }
+
+    .section-title h2, .split h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -1px;
+      margin: 14px 0;
+    }
+
+    .section-title p, .split p {
+      color: var(--cinza);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+      border: 1px solid var(--borda);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .number {
+      display: inline-grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      background: var(--verde-claro);
+      color: var(--verde);
+      border-radius: 11px;
+      font-weight: bold;
+    }
+
+    .card h3 { margin: 18px 0 10px; font-size: 17px; }
+
+    .card p {
+      color: var(--cinza);
+      font-size: 14px;
+    }
+
+    .soft { background: var(--fundo); }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .quote {
+      padding: 35px;
+      border-radius: 18px;
+      background: white;
+      border: 1px solid var(--borda);
+    }
+
+    .quote p {
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--texto);
+    }
+
+    .purchase-box {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: center;
+      padding: 45px;
+      background: var(--verde-claro);
+      border: 1px solid #d7ece7;
+      border-radius: 22px;
+    }
+
+    .purchase-box ul {
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    .price-box {
+      background: white;
+      padding: 30px;
+      border-radius: 17px;
+      text-align: center;
+      border: 1px solid var(--borda);
+    }
+
+    .price {
+      font-size: 18px;
+      color: var(--verde);
+      margin: 12px 0;
+    }
+
+    .price strong {
+      font-size: 58px;
+      letter-spacing: -2px;
+    }
+
+    .price-box .btn { width: 100%; }
+
+    .payment-note {
+      font-size: 11px;
+      color: var(--cinza);
+      margin-top: 12px;
+    }
+
+    .faq {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    details {
+      border-bottom: 1px solid var(--borda);
+      padding: 20px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: var(--cinza);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 45px 0 20px;
+      background: var(--fundo);
+      border-top: 1px solid var(--borda);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer p {
+      color: var(--cinza);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 18px;
+      border-top: 1px solid var(--borda);
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .split, .purchase-box {
+        grid-template-columns: 1fr;
+      }
+
+      .features { grid-template-columns: repeat(2, 1fr); }
+
+      .hero { padding: 55px 0; }
+
+      .book-area { margin-top: 10px; }
+
+      .purchase-box { padding: 25px; }
+    }
+
+    @media (max-width: 540px) {
+      .container { width: 92%; }
+
+      .nav { min-height: 65px; }
+
+      .nav-links { display: none; }
+
+      .nav .btn { padding: 10px 12px; font-size: 12px; }
+
+      h1 { font-size: 39px; }
+
+      .lead { font-size: 15px; }
+
+      .features { grid-template-columns: 1fr; }
+
+      .book {
+        width: 290px;
+        min-height: 400px;
+      }
+
+      .section { padding: 60px 0; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .hero .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">Guia <span>para Afiliados</span></a>
+
+    <nav class="nav-links">
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#sobre">Sobre o guia</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+
+    <a href="#comprar" class="btn">Quero meu guia →</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">E-BOOK DIGITAL • GUIA PARA INICIANTES</span>
+
+      <h1>Entenda o <span>TikTok Shop</span> e comece sua jornada como afiliado.</h1>
+
+      <p class="lead">
+        Aprenda os fundamentos, avalie produtos com mais critério
+        e planeje conteúdos usando um guia prático e direto ao ponto.
+      </p>
+
+      <div class="checks">
+        <span>✓ Roteiros práticos</span>
+        <span>✓ Checklist de produtos</span>
+        <span>✓ Plano de 7 dias</span>
+      </div>
+
+      <a href="#comprar" class="btn">Conhecer o e-book →</a>
+
+      <p class="small">
+        Material educativo independente. Não promete vendas nem renda garantida.
+      </p>
+    </div>
+
+    <div class="book-area">
+      <div class="book">
+        <span class="mini">GUIA PRÁTICO DO ZERO</span>
+        <div>
+          <div class="symbol">↗</div>
+          <h2>TikTok Shop<br><span>para afiliados.</span></h2>
+          <p style="margin-top:22px">
+            Estratégia, conteúdo e organização para começar com clareza.
+          </p>
+        </div>
+        <span class="mini">E-BOOK DIGITAL • 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="conteudo">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">O QUE VOCÊ VAI APRENDER</span>
+      <h2>Um caminho organizado para <span>começar com clareza.</span></h2>
+      <p>Conteúdo pensado para quem está aprendendo sobre o programa de afiliados.</p>
+    </div>
+
+    <div class="features">
+      <article class="card">
+        <span class="number">01</span>
+        <h3>Entenda o programa</h3>
+        <p>Conheça o funcionamento do TikTok Shop e os fundamentos da afiliação.</p>
+      </article>
+
+      <article class="card">
+        <span class="number">02</span>
+        <h3>Escolha produtos</h3>
+        <p>Aprenda a avaliar utilidade, preço, avaliações e condições de comissão.</p>
+      </article>
+
+      <article class="card">
+        <span class="number">03</span>
+        <h3>Planeje vídeos</h3>
+        <p>Use estruturas e roteiros para apresentar produtos com informações reais.</p>
+      </article>
+
+      <article class="card">
+        <span class="number">04</span>
+        <h3>Organize sua rotina</h3>
+        <p>Utilize checklists, calendário e indicadores para acompanhar seu aprendizado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="sobre">
+  <div class="container split">
+    <div>
+      <span class="tag">PARA QUEM É</span>
+      <h2>Aprenda sem depender de <span>promessas milagrosas.</span></h2>
+      <p>
+        Ideal para iniciantes que desejam conhecer o programa, avaliar produtos
+        e organizar a criação de conteúdos.
+      </p>
+      <br>
+      <p>
+        Para participar do programa de afiliados, é necessário cumprir os
+        critérios oficiais vigentes, incluindo a idade mínima aplicável.
+      </p>
+    </div>
+
+    <div class="quote">
+      <p>
+        Entenda as regras. Escolha com critério. Crie conteúdo útil.
+        Aprenda com os resultados.
+      </p>
+      <br>
+      <span class="small">Uma abordagem prática e responsável.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comprar">
+  <div class="container">
+    <div class="purchase-box">
+      <div>
+        <span class="tag">ACESSO DIGITAL</span>
+        <h2 style="font-size:36px;margin:18px 0">
+          Dê o próximo passo no seu aprendizado.
+        </h2>
+        <p>
+          Um guia introdutório para ajudar você a entender o programa
+          e planejar seus primeiros conteúdos.
+        </p>
+
+        <ul>
+          <li>Conteúdo prático para iniciantes</li>
+          <li>Exemplos e roteiros reutilizáveis</li>
+          <li>Checklist de avaliação de produtos</li>
+          <li>Plano de conteúdo de 7 dias</li>
+          <li>Arquivo digital em PDF</li>
+        </ul>
+      </div>
+
+      <div class="price-box">
+        <p>Pagamento único</p>
+        <div class="price">R$ <strong>9,90</strong></div>
+        <p style="font-size:13px;margin-bottom:22px">E-book digital</p>
+
+        <!-- COLOQUE AQUI O LINK REAL DO SEU CHECKOUT KIWIFY -->
+        <a id="checkout" href="#" class="btn" style="width:100%">
+          Comprar meu e-book →
+        </a>
+
+        <p class="payment-note">
+          O pagamento será processado pela Kiwify após a configuração do checkout.
+        </p>
+        <p id="checkout-status" class="payment-note" role="status">
+          Checkout ainda não configurado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="duvidas">
+  <div class="container faq">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Como recebo o e-book?</summary>
+      <p>
+        A entrega será feita pela Kiwify após a confirmação do pagamento,
+        desde que você configure o PDF e a entrega digital no produto.
+      </p>
+    </details>
+
+    <details>
+      <summary>O e-book é físico?</summary>
+      <p>Não. É um material digital em PDF para ler no celular ou computador.</p>
+    </details>
+
+    <details>
+      <summary>Preciso já ser afiliado?</summary>
+      <p>
+        Não para estudar o material. Para participar do programa, você precisa
+        cumprir os requisitos oficiais vigentes.
+      </p>
+    </details>
+
+    <details>
+      <summary>Vou ganhar dinheiro com esse guia?</summary>
+      <p>
+        Não há garantia de vendas, comissões ou renda. Os resultados dependem
+        de vários fatores e podem variar.
+      </p>
+    </details>
+
+    <details>
+      <summary>O material é oficial do TikTok?</summary>
+      <p>
+        Não. É um material educativo independente, sem vínculo ou patrocínio
+        do TikTok.
+      </p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Guia <span>para Afiliados</span></div>
+        <p>Material educativo independente.</p>
+      </div>
+
+      <div>
+        <strong>Informações importantes</strong>
+        <p>
+          Consulte os requisitos e as regras oficiais do TikTok Shop.
+          Resultados não são garantidos.
+        </p>
+        <p>
+          <a href="https://seller-br.tiktok.com/university/"
+             target="_blank" rel="noopener noreferrer">
+            Central de Educação TikTok Shop ↗
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Guia para Afiliados. Todos os direitos reservados.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /*
+    SUBSTITUA o texto abaixo pelo link REAL do seu produto na Kiwify.
+    Exemplo de formato: https://pay.kiwify.com.br/SEU_CODIGO
+    Não use o link de afiliado de outro produto.
+  */
+  const CHECKOUT_URL = "";
+
+  const checkoutButton = document.getElementById("checkout");
+  const checkoutStatus = document.getElementById("checkout-status");
+
+  try {
+    const url = new URL(CHECKOUT_URL);
+
+    if (
+      url.protocol === "https:" &&
+      url.hostname === "pay.kiwify.com.br" &&
+      /^\\/[a-zA-Z0-9]+\\/?$/.test(url.pathname)
+    ) {
+      checkoutButton.href = url.href;
+      checkoutButton.target = "_blank";
+      checkoutButton.rel = "noopener noreferrer";
+      checkoutStatus.textContent = "Checkout configurado.";
+    } else {
+      throw new Error("Link de checkout inválido.");
+    }
+  } catch (error) {
+    checkoutButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      alert("O checkout ainda não foi configurado. Adicione o link do seu produto Kiwify no código.");
+    });
+  }
+</script>
+
+</body>
+</html>
